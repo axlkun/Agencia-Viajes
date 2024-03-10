@@ -5,7 +5,12 @@ block contenido
         h1.text-center.mt-5 #{pagina}
         .row
 
-            h2.d-block.w-100.text-center.mb-5 Agrega un testimonial 
+            .col-md-12
+                h2.d-block.w-100.text-center.mb-5 Agrega un testimonial 
+
+                if(errores)
+                    each error in errores 
+                        .alert.col.alert-danger.text-center= error.mensaje
 
             .row.justify-content-center.col
                 .col-md-8 
