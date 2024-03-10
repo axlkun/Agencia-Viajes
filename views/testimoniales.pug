@@ -1,6 +1,24 @@
 extends ./layout/index
 
 block contenido
-    main.container.mt-5 
-        .row 
-            h1 #{pagina}
+    main.container.mt-5
+        h1.text-center.mt-5 #{pagina}
+        .row
+
+            h2.d-block.w-100.text-center.mb-5 Agrega un testimonial 
+
+            .row.justify-content-center.col
+                .col-md-8 
+                    form(action="" method="POST")
+                        .form-group 
+                            label(for="nombre") Nombre 
+                            input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control") 
+                        
+                        .form-group 
+                            label(for="correo") Correo electrónico 
+                            input#correo(type="email", placeholder="Tu correo", name="correo", class="form-control")
+                        .form-group 
+                            label(for="mensaje") Mensaje 
+                            textarea#mensaje(class="form-control", cols="30", rows="10", name="mensaje", placeholder="Tu mensaje") 
+
+                        input.btn.btn-success.btn-block.mt-5(type="submit")
