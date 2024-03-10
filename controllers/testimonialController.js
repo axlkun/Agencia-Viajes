@@ -22,7 +22,12 @@ const guardarTestimonial = (req, res) => {
         });
     }
 
-    console.log(errores);
+    if(errores.length > 0){
+        res.render('testimoniales', {
+            pagina: 'Testimoniales',
+            errores
+        })
+    }
 }
 
 export {
