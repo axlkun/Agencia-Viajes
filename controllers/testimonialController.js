@@ -25,7 +25,10 @@ const guardarTestimonial = (req, res) => {
     if(errores.length > 0){
         res.render('testimoniales', {
             pagina: 'Testimoniales',
-            errores
+            errores,
+            nombre,
+            correo,
+            mensaje
         })
     }
 }
