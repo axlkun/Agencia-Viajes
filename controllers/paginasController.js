@@ -3,7 +3,8 @@ import { Testimonial } from '../models/Testimoniales.js';
 
 const paginaInicio = (req, res) => {
     res.render('inicio', {
-        pagina: 'Inicio'
+        pagina: 'Inicio',
+        clase: 'home'
     })
 }
 
@@ -34,7 +35,7 @@ const paginaTestimoniales = async (req, res) => {
             pagina: 'Testimoniales',
             testimoniales
         })
-        
+
     } catch (error) {
         console.log(error);
     }
