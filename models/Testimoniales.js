@@ -10,8 +10,5 @@ export const Testimonial = db.define('testimoniales', {
     },
     mensaje: {
         type: Sequelize.STRING
-    },
-    descripcion: {
-        type: Sequelize.STRING
     }
 })
